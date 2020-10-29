@@ -1,0 +1,11 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: "NAME"
+  namespace: "PROJECT"
+spec:
+  displayName: "DISPLAY"
+  image: "IMAGE"
+  sourceType: grpc
+  publisher: Manual
