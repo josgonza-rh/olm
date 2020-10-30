@@ -78,14 +78,16 @@ All the work done here is based on the Red Hat official documentation and you ma
 Build and mirror the catalog from `redhat-operators` source catalog.
 
 ```bash
-./${OCP_ENVIRONMENT}/mirror-catalog-image.sh rh`
+./mirror-catalog-image.sh rh`
 ```
 
 Build and mirror the catalog from `community-operators` source catalog.
 
 ```bash
-./${OCP_ENVIRONMENT}/mirror-catalog-image.sh co`
+./mirror-catalog-image.sh co`
 ```
+
+> ![NOTE](img/note-icon.png) **Script**: you can check the script here [mirror-catalog-image.sh](script/mirror-catalog-image.sh)
 
 
 ## Troubleshooting
