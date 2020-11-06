@@ -122,7 +122,7 @@ main(){
 
   oc image info \
     registry.redhat.io/openshift4/ose-operator-registry:v4.5 \
-      --filter-by-os=linux/amd64
+      --filter-by-os=${ARCH}
 
 
   # Building an Operator catalog image
@@ -133,7 +133,7 @@ main(){
     --appregistry-org=${CONFIG[CATALOG]} \
     --from=registry.redhat.io/openshift4/ose-operator-registry:v4.5 \
     --to=${INTERNAL_REGISTRY}/olm/${CONFIG[CATALOG]}:v4.5-v1 \
-    --filter-by-os=linux/amd64 \
+    --filter-by-os=${ARCH} \
     --insecure=true
 
 
@@ -150,7 +150,7 @@ main(){
     --manifests-only \
     --to-manifests="${manifest_path}" \
     --path="/:${OUTPUTDIR}/database-${cmd_type}" \
-    --filter-by-os=linux/amd64 \
+    --filter-by-os=${ARCH} \
     --insecure=true
 
 
