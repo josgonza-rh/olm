@@ -190,7 +190,7 @@ main(){
   #Using `--continue-on-error` instead of `--skip-missing` as it doesn't work as expected
   oc image mirror \
     --filename="${manifest_path}/mapping-filtered-no-duplicates.txt" \
-    --filter-by-os=linux/amd64 \
+    --filter-by-os=".*" \
     --continue-on-error \
     --insecure
 
